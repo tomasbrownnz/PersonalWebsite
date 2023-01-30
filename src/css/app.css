@@ -3,8 +3,7 @@
 body {
     padding:0px;
     margin:0px;
-    background:linear-gradient(0deg,rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("https://images.unsplash.com/photo-1491956175078-460aea0914ca?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1550&q=80") center center;
-    background-size:cover;
+    /* background:#3A6B35; */
     width:100vw;
     height:100vh;
     overflow:hidden;
@@ -14,7 +13,7 @@ body {
     width: 100vw;
     height: 100vh;
     position: fixed;
-    background:rgb(255, 50, 50);
+    background:#E3B448;
     z-index: 999;
     display: flex;
     justify-content: center;
@@ -25,8 +24,8 @@ body {
     animation: rotate 0.56s infinite linear;
     width:50px;
     height:50px;
-    border:12px solid #fff;
-    border-bottom:12px solid rgb(255, 50, 50);
+    border:12px solid #CBD18F;
+    border-bottom:12px solid #3A6B35;
     border-radius:50%;
     margin:0;
 }
@@ -47,10 +46,10 @@ body {
     display:inline-block;
 }
 .box1 {
-    background:rgb(255, 50, 50);
+    background:#E3B448;
 }
 .box2 {
-    background:rgb(255, 50, 50);
+    background:#E3B448;
     margin-left:-5px;
 }
 #menu {
@@ -79,9 +78,8 @@ body {
     padding-bottom:10vh;
 }
 #middle h1 {
-    color:rgb(255, 50, 50);
+    color:#E3B448;
     font-size:70px;
-    text-decoration:underline;
 }
 #about {
     width:10vw;
@@ -119,7 +117,7 @@ body {
     transition:0.4s ease-in-out;
     border-radius:0px 0px 100px 100px;
 }
-#contact {
+#cv {
     width:10vw;
     height:10vw;
     text-align:center;
@@ -137,15 +135,15 @@ body {
     border-radius:100px 100px 0px 0px;
 }
 #about:hover {
-    background:rgba(255,50,50,0.9);
+    background:#E3B448;
     cursor:pointer;
 }
 #work:hover {
-    background:rgba(255,50,50,0.9);
+    background:#E3B448;
     cursor:pointer;
 }
-#contact:hover {
-    background:rgba(255,50,50,0.9);
+#cv:hover {
+    background:#E3B448;
     cursor:pointer;
 }
 #middle table {
@@ -165,7 +163,7 @@ body {
 }
 .social:hover { 
     cursor: pointer;
-    color:rgb(255, 50, 50);
+    color:#E3B448;
 }
 .container {
     width:90vw;
@@ -324,7 +322,7 @@ body {
     #about {
         display:none;
     }
-    #contact {
+    #cv {
         display:none;
     }
     #work {
