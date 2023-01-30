@@ -3,7 +3,6 @@
 body {
     padding:0px;
     margin:0px;
-    /* background:#3A6B35; */
     width:100vw;
     height:100vh;
     overflow:hidden;
@@ -13,7 +12,7 @@ body {
     width: 100vw;
     height: 100vh;
     position: fixed;
-    background:#E3B448;
+    background:#5a81a4;
     z-index: 999;
     display: flex;
     justify-content: center;
@@ -24,8 +23,8 @@ body {
     animation: rotate 0.56s infinite linear;
     width:50px;
     height:50px;
-    border:12px solid #CBD18F;
-    border-bottom:12px solid #3A6B35;
+    border:12px solid #DBE9EE;
+    border-bottom:12px solid #5a81a4;
     border-radius:50%;
     margin:0;
 }
@@ -46,10 +45,10 @@ body {
     display:inline-block;
 }
 .box1 {
-    background:#E3B448;
+    background:#DBE9EE;
 }
 .box2 {
-    background:#E3B448;
+    background:#DBE9EE;
     margin-left:-5px;
 }
 #menu {
@@ -78,7 +77,11 @@ body {
     padding-bottom:10vh;
 }
 #middle h1 {
-    color:#E3B448;
+    /* color:#E43414; */
+    background: -webkit-linear-gradient(left, #5a81a4, #8b9196);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  
     font-size:70px;
 }
 #about {
@@ -135,15 +138,15 @@ body {
     border-radius:100px 100px 0px 0px;
 }
 #about:hover {
-    background:#E3B448;
+    background:#5a81a4;
     cursor:pointer;
 }
 #work:hover {
-    background:#E3B448;
+    background:#5a81a4;
     cursor:pointer;
 }
 #cv:hover {
-    background:#E3B448;
+    background:#5a81a4;
     cursor:pointer;
 }
 #middle table {
@@ -163,7 +166,7 @@ body {
 }
 .social:hover { 
     cursor: pointer;
-    color:#E3B448;
+    color:#5a81a4;
 }
 .container {
     width:90vw;
@@ -293,7 +296,7 @@ body {
     font-weight:bold;
 }
 #footer a {
-    color:rgb(255, 50, 50) ;
+    color: #5a81a4;
 }
 #particles-js {
     position:fixed;
@@ -303,19 +306,6 @@ body {
 ::-webkit-scrollbar {
     width:5px;
     height:5px;
-}
-::-webkit-scrollbar-track {
-    background: #fff; 
-}
-::-webkit-scrollbar-thumb {
-    background: rgb(255, 50, 50); 
-}
-::-webkit-scrollbar-thumb:hover {
-    background: rgba(255, 50, 50,0.8); 
-}
-::selection {
-	color: #fff;
-	background: rgb(255, 50, 50);
 }
 
 @media (max-width: 800px){ 
