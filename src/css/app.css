@@ -8,6 +8,7 @@ body {
     overflow:hidden;
     font-family: 'Josefin Sans', sans-serif;
 }
+
 #loading {
     width: 100vw;
     height: 100vh;
@@ -61,7 +62,6 @@ body {
     margin:0px 6%;
     font-size:19px;
     color:#fff;
-    text-decoration:underline;
 }
 #middle {
     width:100vw;
@@ -169,17 +169,40 @@ body {
     color:#5a81a4;
 }
 .container {
-    width:90vw;
-    height:90vh;
-    padding:5vh 5vw;
-    background:rgb(255, 50, 50);
+    width:100%;
+    height: 100%;
+    padding:15px;
     color:#fff;
     z-index:9;
-    position:fixed;
-    max-height:100vh;
-    overflow-y:auto;
-    display:none;
+    max-height: 100%;
+    /* position:fixed; */
+    overflow-y: auto;
+    display: none;
+    opacity: 0;
+    transition: opacity 2s;
 }
+
+#container_background{
+    position: fixed;    
+    top: 50%;
+    right: 50%;
+    margin-right: -45vw;
+    margin-top: -90vw;
+    width: 90vw;
+    height: 90vh;
+    border-radius: 5vw;
+    background: #5a81a4E6;
+    z-index: 10;    
+    clip-path: circle(0%);
+    transition: clip-path 1s, right 1s, margin-top 1s;
+}
+
+.container_background_animate{
+    clip-path: circle(100%) !important;
+    margin-top: -45vh !important;
+}
+
+
 .container div {
     font-size:25px;
     margin:20px 0px;
@@ -191,6 +214,23 @@ body {
 .container section {
     margin:8vh 0px;
 }
+
+.container_background div {
+    font-size:25px;
+    margin:20px 0px;
+    transition:0.4s ease-in-out;
+    color: #fff;
+}
+
+.container_background div:hover {
+    cursor:pointer;
+}
+
+.container_background section {
+    margin:8vh 0px;
+}
+
+
 #used div{
     font-size:14px !important;
     display:inline-block;
@@ -207,7 +247,6 @@ body {
 }
 .container h1 {
     font-size:60px;
-    text-decoration:underline;
 }
 .container p {
     font-size:21px;
@@ -319,7 +358,7 @@ body {
         display:none;
     }
     #footer {
-        text-align:center;
+        display: none;
     }
     #middle {
         width:90vw;

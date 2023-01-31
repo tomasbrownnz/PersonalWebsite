@@ -15,6 +15,48 @@
     <div id="loading">
         <div id="spinner"></div>
     </div>
+    <!-- <div id="container_background" class="container_background">
+        <div onclick="closebg()"><i class="fas fa-times" style="padding: 5vh 0 0 5vw;"></i></div>
+        
+        <div id="work_container" class="container">
+            <h1>work</h1>
+            <h2>ImmerseMe</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <div id="used">
+                <div><i class="fas fa-circle"></i>&nbsp;HTML5</div>
+                <div><i class="fas fa-circle"></i>&nbsp;CSS3</div>
+                <div><i class="fas fa-circle"></i>&nbsp;Javascript</div>
+            </div>
+            <button class="btn_one">button 1</button>
+            <button class="btn_two">button 2</button>
+        </div>
+
+        <div id="about_container" class="container">
+                <h1>about</h1>
+                <h2>about me</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+        
+                <h2>skills</h2>
+                <p>
+                    i do eveything ;)
+                </p>
+                
+        </div>
+
+        <div id="cv_container" class="container">
+            <iframe style="max-height: 80vh; overflow-y: hidden;" src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20210101201653/PDF.pdf#toolbar=0" 
+            width="100%" 
+            height="100%"> 
+            </iframe>
+        </div>
+    </div> -->
     <div id="render_container"></div>
     <div id="box">
         <div class="box1 onlywide animated bounceOutLeft" style="animation-delay:1.7s;"></div>
@@ -26,14 +68,14 @@
     </div>
     <a id="about" onclick="showabout()" class="animated fadeIn" style="animation-delay:2.2s;">about</a>
     <a id="work" onclick="showwork()" class="animated fadeIn" style="animation-delay:2.2s;">work</a>
-    <a id="cv" onclick="showcv()" class="animated fadeIn" style="animation-delay:2.2s;">cv</a>
-    <div id="middle" class="animated slideInDown" style="animation-delay:2.0s;">
+    <a id="cv" onclick="showcv()" class="animated fadeIn" style="animation-delay:2.2s;"><i class="fas fa-home"></i></a>
+    <div id="middle" class="animated slideInDown" style="animation-delay:2.0s; transition: margin-top 2s;">
         <h1>tomas brown</h1>
         <h2>Software Engineer / Creative Programmer</h2>
         <div id="menu">
-            <a onclick="showabout()">about</a>
-            <a onclick="showwork()">work</a>
-            <a onclick="showcv()">cv</a>
+            <a onclick="showabout()"><i class="fa fa-user"></i></a>
+            <a onclick="showcv()"><i class="fa fa-home"></i></a>
+            <a onclick="showwork()"><i class="fa fa-briefcase"></i></a>
         </div>
         <table>
                 <tr>
@@ -42,52 +84,13 @@
                 </tr>
         </table>
     </div>
-    <div id="work_container" class="container">
-        <div onclick="closework()"><i class="fas fa-angle-right"></i></div>
-        <h1>works.</h1>
-        <section>
-            <h2>work title</h2>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-            <div id="used">
-                <div><i class="fas fa-circle"></i>&nbsp;HTML5</div>
-                <div><i class="fas fa-circle"></i>&nbsp;CSS3</div>
-                <div><i class="fas fa-circle"></i>&nbsp;Javascript</div>
-            </div>
-            <button class="btn_one">button 1</button>
-            <button class="btn_two">button 2</button>
-        </section>
     </div>
-    <div id="about_container" class="container">
-            <div onclick="closeabout()"><i class="fas fa-angle-left"></i></div>
-            <h1>about.</h1>
-            <section>
-                <h2>about me</h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                </p>
-            </section>
-            <section>
-                <h2>skills</h2>
-                <p>
-                    i do eveything ;)
-                </p>
-            </section>
-        </div>
-          <div id="cv_container" class="container">
-            <div onclick="closecv()"><i class="fas fa-angle-down"></i></div>
-                <iframe style="max-height: 80vh; overflow-y: hidden;" src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20210101201653/PDF.pdf#toolbar=0" 
-                width="100%" 
-                height="100%"> </iframe>
-        </div>
         <div id="footer">
             made by <br> <a href="https://github.com/tomasbrownnz" target="_blank">tomasbrown</a>
         </div>
     <script src="index.js" type="text/javascript"></script>
+    
+    <div class="full"></div>
 
     <script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>
 
@@ -110,10 +113,13 @@
         import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
         import { Water } from 'three/addons/objects/Water.js';
         import { Sky } from 'three/addons/objects/Sky.js';
+        import { FontLoader } from 'three/addons/loaders/FontLoader.js';
+        import { TextGeometry } from 'three/addons/geometries/TextGeometry.js';
 
         let container, stats;
         let camera, scene, renderer;
-        let controls, water, sun, mesh;
+        let controls, water, sun, mesh1, mesh2;
+        let vector;
 
         init();
         animate();
@@ -121,7 +127,8 @@
         function init() {
 
             container = document.getElementById( 'render_container' );
-
+            vector = new THREE.Vector3();
+        
             //
 
             renderer = new THREE.WebGLRenderer();
@@ -135,7 +142,7 @@
             scene = new THREE.Scene();
 
             camera = new THREE.PerspectiveCamera( 55, window.innerWidth / window.innerHeight, 1, 20000 );
-            camera.position.set( 30, 22, 100 );
+            camera.position.set( 0, 22, 100 );
 
             //
 
@@ -158,8 +165,8 @@
                     sunDirection: new THREE.Vector3(),
                     sunColor: 0xffffff,
                     waterColor: 0x001e0f,
-                    distortionScale: 3.7,
-                    fog: scene.fog !== undefined
+                    distortionScale: 10,
+                    fog: true
                 }
             );
 
@@ -181,8 +188,8 @@
             skyUniforms[ 'mieDirectionalG' ].value = 0.8;
 
             const parameters = {
-                elevation: 2,
-                azimuth: 180
+                elevation: 1,
+                azimuth: 162
             };
 
             const pmremGenerator = new THREE.PMREMGenerator( renderer );
@@ -193,7 +200,7 @@
                 const phi = THREE.MathUtils.degToRad( 90 - parameters.elevation );
                 const theta = THREE.MathUtils.degToRad( parameters.azimuth );
 
-                sun.setFromSphericalCoords( 1, phi, theta );
+                sun.setFromSphericalCoords( 33, phi, theta );
 
                 sky.material.uniforms[ 'sunPosition' ].value.copy( sun );
                 water.material.uniforms[ 'sunDirection' ].value.copy( sun ).normalize();
@@ -209,12 +216,76 @@
             updateSun();
 
             //
+            
+            
+            const geometry = new THREE.BoxGeometry( 100, 100, 100 );
+            const material = new THREE.MeshStandardMaterial( { 
+                roughness: 10,
+                color: '#c2e1ff'
+            } );
 
-            const geometry = new THREE.BoxGeometry( 30, 30, 30 );
-            const material = new THREE.MeshStandardMaterial( { roughness: 0 } );
+            mesh1 = new THREE.Mesh( geometry, material );
+            mesh1.position.x = -210;
+            mesh1.position.z = -25;
+            // mesh1.rotation.y = Math.PI;
 
-            mesh = new THREE.Mesh( geometry, material );
-            // scene.add( mesh );
+            //
+            
+            mesh2 = new THREE.Mesh( geometry, material );
+            mesh2.position.x = 210;
+            mesh2.position.z = -25;
+            // mesh2.rotation.y = Math.PI;
+
+            //
+
+            const loader = new FontLoader();
+            let textGeometry;
+            loader.load( '/src/fonts/JosefinSans.json', function ( font ) {
+
+                // const color = 0x002232;
+                const color = 0xffffff;
+
+                const matDark = new THREE.LineBasicMaterial( {
+                    color: color,
+                    side: THREE.DoubleSide
+                } );
+
+                const message1 = 
+                "about.\nKia ora! Tautimai to my corner of the web!\nI am a Kiwi Software Engineer with a passion\nfor creative design, mixed reality and edtech.\nMy avocations are constantly growing but they\nmostly revolve around computers, exploring\nAotearoa, catching kai moana and culinary arts.\nIf you're interested in chatting with me,\nplease feel free to flick me an email!\ntomasbrownnz@gmail.com\nNgā mihi maioha"
+                
+                const message2 = 
+                "work.\nI am currently a full-stack Software Engineer\nat a VR language learning edtech platform,\nImmerseMe.\nOur small team is pushing the boundaries\n of mixed reality language learning and digital\nlearning assets.\nThe constant challenges we face, as a start-up\ndevelopment team, lets me build my skill-set at\na rapid pace and rarely leaves me unsatisfied.\nGo on, connect with me on LinkedIn or Github!"
+
+                const shapes1 = font.generateShapes( message1, 3 );
+                const shapes2 = font.generateShapes( message2, 3 );
+
+                const geometry1 = new THREE.ShapeGeometry( shapes1 );
+                const geometry2 = new THREE.ShapeGeometry( shapes2 );
+
+                geometry1.computeBoundingBox();
+                geometry2.computeBoundingBox();
+
+                // make shape ( N.B. edge view not visible )
+
+                const text1 = new THREE.Mesh( geometry1, matDark );
+                text1.position.y =  38;
+                text1.position.x = 55;
+                text1.position.z = 50;
+                text1.rotation.y = Math.PI / 2;
+                mesh1.add( text1 );
+
+                const text2 = new THREE.Mesh( geometry2, matDark );
+                text2.position.y =  38;
+                text2.position.x = -55;
+                text2.position.z = -40;
+                text2.rotation.y = -Math.PI/2;
+                mesh2.add( text2 );
+
+            } ); //end load function
+
+
+            scene.add( mesh1 );
+            scene.add( mesh2 );
 
             //
 
@@ -273,15 +344,55 @@
 
             const time = performance.now() * 0.001;
 
-            // mesh.position.y = Math.sin( time ) * 20 + 5;
-            // mesh.rotation.x = time * 0.5;
-            // mesh.rotation.z = time * 0.51;
+            mesh1.position.y = Math.sin( time ) * 2.5 + 25;
+            mesh2.position.y = Math.sin( time ) * 2.5 + 25;
+        
 
-            water.material.uniforms[ 'time' ].value += 1.0 / 60.0;
+            water.material.uniforms[ 'time' ].value += 1.0 / 120.0;
 
             renderer.render( scene, camera );
 
         }
+
+        function moveCamera(obj, movement) {
+            
+            clearInterval(timeout);
+
+            let resting, speed;
+
+            switch (obj){
+                case 'about':
+                    resting = -140;
+                    speed = (vector.x - resting)/500;
+                    break;
+                case 'work':
+                    resting = 140;
+                    speed = (vector.x - resting)/500;
+                    break;
+                case 'cv':
+                    resting = 0;
+                    speed = (vector.x - resting)/500;
+                    break;
+                case 'close':
+                    resting = 0;
+                    speed = (vector.x - resting)/500;
+                    break;
+            }
+
+            
+            timeout = setInterval(function(){
+
+                camera.lookAt(vector.x, 10, -1) 
+                vector.x-=speed;
+                if(vector.x >= resting-1 && vector.x <= resting+1){
+                    clearInterval(timeout);
+                }
+            }, 1)
+        
+        }
+
+        window.moveCamera = moveCamera;
+        window.camera = camera;
 
     </script>
     
