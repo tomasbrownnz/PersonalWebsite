@@ -208,17 +208,26 @@
                     side: THREE.DoubleSide
                 } );
 
+                const title1 = 
+                "about."
                 const message1 = 
-                "about.\nKia ora! Tautimai to my corner of the web!\nI am a Kiwi Software Engineer with a passion\nfor creative design, mixed reality and edtech.\nMy avocations are constantly growing but they\nmostly revolve around computers, exploring\nAotearoa, catching kai moana and culinary arts.\nIf you're interested in chatting with me,\nplease feel free to flick me an email!\ntomasbrownnz@gmail.com\nNgā mihi maioha"
+                "Kia ora! Tautimai to my corner of the web!\nI am a Kiwi Software Engineer with a passion\nfor creative design, mixed reality and edtech.\nMy avocations are constantly growing but they\nmostly revolve around computers, exploring\nAotearoa, catching kai moana and culinary arts.\nIf you're interested in chatting with me,\nplease feel free to flick me an email!\ntomasbrownnz@gmail.com\nNgā mihi maioha"
                 
+                const title2 = "work."
                 const message2 = 
-                "work.\nI am currently a full-stack Software Engineer\nat a VR language learning edtech platform,\nImmerseMe.\nOur small team is pushing the boundaries\n of mixed reality language learning and digital\nlearning assets.\nThe constant challenges we face, as a start-up\ndevelopment team, lets me build my skill-set at\na rapid pace and rarely leaves me unsatisfied.\nGo on, connect with me on LinkedIn or Github!"
+                "I am currently a full-stack Software Engineer\nat a VR language learning edtech platform,\nImmerseMe.\nOur small team is pushing the boundaries\nof mixed reality language learning and digital\nlearning assets.\nThe constant challenges we face, as a start-up\ndevelopment team, lets me build my skill-set at\na rapid pace and rarely leaves me unsatisfied.\nGo on, connect with me on LinkedIn or Github!"
 
-                const shapes1 = font.generateShapes( message1, 3 );
-                const shapes2 = font.generateShapes( message2, 3 );
+                const shapes1 = font.generateShapes( message1, 2.5 );
+                const shapes2 = font.generateShapes( message2, 2.5 );
+
+                const shapes11 = font.generateShapes( title1, 5 );
+                const shapes21 = font.generateShapes( title2, 5 );
 
                 const geometry1 = new THREE.ShapeGeometry( shapes1 );
                 const geometry2 = new THREE.ShapeGeometry( shapes2 );
+
+                const geometry11 = new THREE.ShapeGeometry( shapes11 );
+                const geometry21 = new THREE.ShapeGeometry( shapes21 );
 
                 geometry1.computeBoundingBox();
                 geometry2.computeBoundingBox();
@@ -226,18 +235,32 @@
                 // make shape ( N.B. edge view not visible )
 
                 const text1 = new THREE.Mesh( geometry1, matDark );
-                text1.position.y =  38;
+                text1.position.y =  30;
                 text1.position.x = 55;
-                text1.position.z = 50;
+                text1.position.z = 45;
                 text1.rotation.y = Math.PI / 2;
                 mesh1.add( text1 );
 
                 const text2 = new THREE.Mesh( geometry2, matDark );
-                text2.position.y =  38;
+                text2.position.y =  30;
                 text2.position.x = -55;
-                text2.position.z = -40;
+                text2.position.z = -35;
                 text2.rotation.y = -Math.PI/2;
                 mesh2.add( text2 );
+
+                const text11 = new THREE.Mesh( geometry11, matDark );
+                text11.position.y =  38;
+                text11.position.x = 55;
+                text11.position.z = 48;
+                text11.rotation.y = Math.PI / 2;
+                mesh1.add( text11 );
+
+                const text21 = new THREE.Mesh( geometry21, matDark );
+                text21.position.y =  38;
+                text21.position.x = -55;
+                text21.position.z = -37;
+                text21.rotation.y = -Math.PI/2;
+                mesh2.add( text21 );
 
             } ); //end load function
 

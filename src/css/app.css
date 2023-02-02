@@ -248,6 +248,7 @@ body {
 .container h1 {
     font-size:60px;
 }
+
 .container p {
     font-size:21px;
 }
@@ -384,5 +385,17 @@ body {
     }
     #box div {
         width:100%;
+    }
+
+    h1{
+        margin: 2vh;
+    }
+
+    table{
+        margin: 2vh auto !important;
+    }
+
+    #menu{
+        margin: 2vh 0; 
     }
 }
