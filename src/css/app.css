@@ -81,9 +81,13 @@ body {
     background: -webkit-linear-gradient(left, #5a81a4, #8b9196);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-  
-    font-size:70px;
+    font-size: min(calc(1rem + 5vw), 60px);
 }
+
+#middle h2{
+    font-size: min(calc(0.5rem + 2vw), 1.5rem) !important;
+}
+
 #about {
     width:10vw;
     height:10vw;
@@ -246,7 +250,7 @@ body {
     cursor:text;
 }
 .container h1 {
-    font-size:60px;
+    font-size:calc(1rem + 1vw);
 }
 
 .container p {
