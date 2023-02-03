@@ -56,7 +56,8 @@
         {
             "imports": {
                 "three": "https://unpkg.com/three@0.149.0/build/three.module.js",
-                "three/addons/": "https://unpkg.com/three@0.149.0/examples/jsm/"
+                "three/addons/": "https://unpkg.com/three@0.149.0/examples/jsm/",
+                "three/src/": "https://unpkg.com/three@0.149.0/src/"
             }
         }
     </script>
@@ -72,6 +73,7 @@
         import { Water } from 'three/addons/objects/Water.js';
         import { Sky } from 'three/addons/objects/Sky.js';
         import { FontLoader } from 'three/addons/loaders/FontLoader.js';
+        import { ImageLoader } from 'three/src/loaders/ImageLoader.js';
         import { TextGeometry } from 'three/addons/geometries/TextGeometry.js';
 
         let container, stats;
@@ -101,6 +103,13 @@
 
             camera = new THREE.PerspectiveCamera( 55, window.innerWidth / window.innerHeight, 1, 20000 );
             camera.position.set( 0, 22, 100 );
+
+            //
+
+            const pointLight = new THREE.PointLight( 0xffffff, 1.5 );
+            pointLight.color.setHSL( 55, 0.1, 0.1 );
+            pointLight.position.set( 0, 0, 250 );
+            scene.add( pointLight );
 
             //
 
@@ -185,14 +194,14 @@
             mesh1 = new THREE.Mesh( geometry, material );
             mesh1.position.x = -210;
             mesh1.position.z = -25;
-            // mesh1.rotation.y = Math.PI;
+            mesh1.rotation.y = Math.PI / 10 - 0.2;
 
             //
             
             mesh2 = new THREE.Mesh( geometry, material );
             mesh2.position.x = 210;
             mesh2.position.z = -25;
-            // mesh2.rotation.y = Math.PI;
+            mesh2.rotation.y = - Math.PI / 10 + 0.2;
 
             //
 
@@ -215,10 +224,10 @@
                 
                 const title2 = "work."
                 const message2 = 
-                "I am currently a full-stack Software Engineer\nat a VR language learning edtech platform,\nImmerseMe.\nOur small team is pushing the boundaries\nof mixed reality language learning and digital\nlearning assets.\nThe constant challenges we face, as a start-up\ndevelopment team, lets me build my skill-set at\na rapid pace and rarely leaves me unsatisfied.\nGo on, connect with me on LinkedIn or Github!"
+                "I am currently a full-stack Software Engineer\nat a VR language learning edtech platform,\nImmerseMe.\nOur small team is pushing the boundaries\nof mixed reality language learning and digital\nlearning assets.\nAs a start-up development team, the constant\n challenges we face let me build my skill set at\na rapid pace and rarely leave me unsatisfied.\nGo on, connect with me on LinkedIn or Github!"
 
-                const shapes1 = font.generateShapes( message1, 2.5 );
-                const shapes2 = font.generateShapes( message2, 2.5 );
+                const shapes1 = font.generateShapes( message1, 2.8 );
+                const shapes2 = font.generateShapes( message2, 2.8 );
 
                 const shapes11 = font.generateShapes( title1, 5 );
                 const shapes21 = font.generateShapes( title2, 5 );
@@ -237,14 +246,14 @@
                 const text1 = new THREE.Mesh( geometry1, matDark );
                 text1.position.y =  30;
                 text1.position.x = 55;
-                text1.position.z = 45;
+                text1.position.z = 48;
                 text1.rotation.y = Math.PI / 2;
                 mesh1.add( text1 );
 
                 const text2 = new THREE.Mesh( geometry2, matDark );
                 text2.position.y =  30;
                 text2.position.x = -55;
-                text2.position.z = -35;
+                text2.position.z = -37;
                 text2.rotation.y = -Math.PI/2;
                 mesh2.add( text2 );
 
@@ -270,36 +279,65 @@
 
             //
 
+            // Image loader
+            // Create a texture loader so we can load our image file
+            var textureLoader = new THREE.TextureLoader();
+
+            
+            // ImmerseMe Image
+
+            // Load an image file into a custom material
+            var lambertMaterial = new THREE.MeshBasicMaterial({
+                map: textureLoader.load('src/images/ImmerseMe.png'),
+                transparent: true
+            });
+
+            // create a plane geometry for the image with a width of 10
+            // and a height that preserves the image's aspect ratio
+            var planeGeometry = new THREE.PlaneGeometry(82.8, 34.35);
+
+            // combine our image geometry and material into a mesh
+            var imgMesh = new THREE.Mesh(planeGeometry, lambertMaterial);
+
+            // set the position of the image mesh in the x,y,z dimensions
+            imgMesh.position.y =  12;
+            imgMesh.position.x = -10;
+            imgMesh.position.z = 55;
+            // mesh.rotation.x = - Math.PI / 4;
+            // add the image to the scene
+            mesh2.add(imgMesh);
+
+
+            // Personal Image
+            
+            // Load an image file into a custom material
+            var lambertMaterial = new THREE.MeshBasicMaterial({
+                map: textureLoader.load('src/images/PersonalPicture.jpg'),
+                transparent: true
+            });
+
+            // create a plane geometry for the image with a width of 10
+            // and a height that preserves the image's aspect ratio
+            var planeGeometry = new THREE.PlaneGeometry(75, 75);
+
+            // combine our image geometry and material into a mesh
+            var imgMesh = new THREE.Mesh(planeGeometry, lambertMaterial);
+
+            // set the position of the image mesh in the x,y,z dimensions
+            imgMesh.position.y =  7;
+            imgMesh.position.x = 5;
+            imgMesh.position.z = 51;
+            // mesh.rotation.x = - Math.PI / 4;
+            // add the image to the scene
+            mesh1.add(imgMesh);
+
             controls = new OrbitControls( camera, renderer.domElement );
             controls.maxPolarAngle = Math.PI * 0.495;
             controls.target.set( 0, 10, 0 );
             controls.minDistance = 40.0;
             controls.maxDistance = 200.0;
             controls.update();
-
-            //
-
-            // stats = new Stats();
-            // container.appendChild( stats.dom );
-
-            // GUI
-
-            // const gui = new GUI();
-
-            // const folderSky = gui.addFolder( 'Sky' );
-            // folderSky.add( parameters, 'elevation', 0, 90, 0.1 ).onChange( updateSun );
-            // folderSky.add( parameters, 'azimuth', - 180, 180, 0.1 ).onChange( updateSun );
-            // folderSky.open();
-
-            // const waterUniforms = water.material.uniforms;
-
-            // const folderWater = gui.addFolder( 'Water' );
-            // folderWater.add( waterUniforms.distortionScale, 'value', 0, 8, 0.1 ).name( 'distortionScale' );
-            // folderWater.add( waterUniforms.size, 'value', 0.1, 10, 0.1 ).name( 'size' );
-            // folderWater.open();
-
-            //
-
+            
             window.addEventListener( 'resize', onWindowResize );
 
         }
